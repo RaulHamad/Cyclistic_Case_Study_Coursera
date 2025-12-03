@@ -18,9 +18,9 @@ Para guiar a estratégia, a análise focou em responder as seguintes perguntas:
 
 ---
 
-## 3. Preparação dos Dados (Fase PREPARAR)
+## 3. Preparação dos Dados 
 
-A análise utilizou dados históricos de viagens de bicicleta da Cyclistic, disponibilizados sob licença pela Motivate International Inc. Os dados utilizados são de **Janeiro a Novembro de 2025** (os mais atuais) e representam viagens no sistema de bicicletas compartilhadas de Chicago.
+A análise utilizou dados históricos de viagens de bicicleta da Cyclistic, disponibilizados sob licença pela Motivate International Inc. Os dados utilizados são de **Janeiro a Outubro de 2025** (os mais atuais) e representam viagens no sistema de bicicletas compartilhadas de Chicago.
 
 ### Fontes de Dados e Estrutura
 
