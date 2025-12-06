@@ -70,7 +70,7 @@ A integridade dos dados foi garantida pela aplicação rigorosa das seguintes re
     * Viagens com **duração superior a 24 horas** (indicadores de roubo ou falha grave de sistema).
 *  **Verificação Categórica:** Foi assegurado que a coluna `member_casual` continha **somente** os valores válidos (`'member'` e `'casual'`).
 
-### 3.3. Engenharia de Recursos (Feature Engineering)
+### Engenharia de Recursos (Feature Engineering)
 
 Para responder à pergunta de negócio, foram criados novos campos analíticos a partir dos campos de data e hora:
 
