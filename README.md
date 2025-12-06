@@ -44,6 +44,8 @@ A análise utilizou dados históricos de viagens de bicicleta da Cyclistic, disp
 
 O resultado desta fase é o arquivo **`cyclistic_viagens_unificadas_bruto.csv`**.
 
+([01_cyclistic_preprocessing.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/01_cyclistic_preprocessing.ipynb))
+
 ---
 
 ## 4. Limpeza e Criação de Dados Analíticos
@@ -82,5 +84,7 @@ Para responder à pergunta de negócio, foram criados novos campos analíticos a
 ### Entregável
 
 O resultado desta fase é o arquivo **`cyclistic_dados_limpos_analise.csv`**.
+
+([02_data_cleaning_and_feature_engineering.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/02_data_cleaning_and_feature_engineering.ipynb))
 
 ---
