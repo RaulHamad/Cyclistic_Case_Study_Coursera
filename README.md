@@ -1,4 +1,15 @@
+---
+---
+# Portuguese
+
+
+---
+---
+
 # 🚴 Estudo de Caso Cyclistic: Estratégia de Conversão de Ciclistas Casuais
+
+
+### Este projeto de Análise de Dados de Negócios (Case Study: Cyclistic) teve como objetivo desenvolver uma estratégia de marketing baseada em dados para a empresa fictícia de bicicletas compartilhadas Cyclistic, focada na conversão de ciclistas casuais em membros anuais. O processo seguiu as seis etapas do ciclo de análise de dados (Ask, Prepare, Process, Analyze, Share, e Act). Utilizando dados de viagens de 2025 da Divvy/Cyclistic, foram aplicadas técnicas de limpeza e engenharia de features em Python (Pandas) para criar métricas de duração e frequência. A análise revelou uma diferença fundamental no comportamento de uso: enquanto os Membros Anuais utilizam as bicicletas principalmente para transporte funcional e deslocamento (viagens curtas e nos dias úteis), os Ciclistas Casuais as utilizam para lazer e recreação (viagens longas e nos finais de semana). Esta descoberta levou a três recomendações estratégicas direcionadas à equipe de marketing, focadas em otimizar a conversão nos hotspots de lazer e comunicar a economia do uso diário.
 
 ## 1. Introdução e Tarefa de Negócios 
 
@@ -106,7 +117,7 @@ A análise foi conduzida no notebook **([03_analysis_and_visualization.ipynb](ht
 
 A análise comparativa entre as duas bases de clientes (`member` e `casual`) revelou padrões de uso fundamentalmente diferentes, que podem ser explorados pelo marketing:
 
-#### 🎯 Resposta à Pergunta de Negócio:
+#### Resposta à Pergunta de Negócio:
 
 **Sim, membros anuais e ciclistas casuais usam as bicicletas Cyclistic de maneiras distintas.**
 
@@ -131,3 +142,203 @@ As descobertas da análise foram comunicadas à Diretoria e à Equipe de Marketi
 ...
 ➡️ **[Acessar o Notebook de Análise Estatística (Python)]**
 **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))**
+
+##  Principais Recomendações
+
+Baseado nos padrões de **duração**, **frequência** e **localização** dos Casuais, as recomendações são:
+
+---
+
+### Recomendação 1: Campanha de Marketing Direcionada por Localização e Tempo
+
+* **O Insight:** Ciclistas Casuais têm picos de uso nos **Finais de Semana** e se concentram em estações de lazer/turismo (parques, lagos, orla).
+* **A Ação:** Implementar campanhas de **Marketing de Proximidade (Geofencing)** e **E-mail Marketing** acionadas após o término de uma viagem casual longa (acima da média dos membros, ex: 35 minutos), especialmente aos domingos. A mensagem deve focar na **vantagem de custo-benefício** de uma assinatura anual para uso semanal.
+* **Métrica de Sucesso:** Aumento de **15%** nas conversões de Casuais que iniciaram viagens em estações turísticas nos fins de semana.
+
+---
+
+### Recomendação 2: Ofertas de Valor para o Deslocamento Diário
+
+* **O Insight:** A principal barreira de Casuais é ver a bicicleta apenas como utilitária (para lazer). Membros usam consistentemente para deslocamento em dias de semana.
+* **A Ação:** Criar um **teste de assinatura de 30 dias com desconto** ou um **Programa de Fidelidade** focado em viagens nos dias úteis. A comunicação deve enfatizar a **economia de tempo e dinheiro** no deslocamento casa-trabalho em comparação com transporte público ou carro.
+* **Métrica de Sucesso:** Aumento da **frequência média semanal** de Casuais que se tornaram membros.
+
+---
+
+### Recomendação 3: Melhoria dos Pontos de Uso Frequente de Ciclistas Casuais
+
+* **O Insight:** As **Top 10 Estações Casuais** são locais ideais para conversão, pois demonstram alta demanda e forte engajamento recreativo.
+* **A Ação:** Implementar **"Estações de Conversão"** nos finais de semana nos *hotspots* mais movimentados. Isso inclui a presença de equipe (embaixadores da marca) para oferecer **promoções exclusivas** para assinaturas anuais (ex: teste gratuito de 30 dias na hora) e garantir **abastecimento ideal de bicicletas** nas horas de pico de lazer.
+* **Métrica de Sucesso:** Aumento da **taxa de conversão no local** para 5% dos Casuais que completam viagens longas nas estações de alto volume.
+
+
+
+---
+---
+# English
+
+---
+---
+# 🚴 Cyclistic Case Study: Casual Rider Conversion Strategy
+
+### This Business Data Analysis project (Case Study: Cyclistic) aimed to develop a data-driven marketing strategy for the fictional bike-share company Cyclistic, focused on converting casual riders into annual members. The process followed the six steps of the data analysis cycle (Ask, Prepare, Process, Analyze, Share, and Act). Utilizing 2025 trip data from Divvy/Cyclistic, cleaning and feature engineering techniques were applied in Python (Pandas) to create duration and frequency metrics. The analysis revealed a fundamental difference in usage behavior: while Annual Members primarily use bikes for functional transport and commuting (short trips on weekdays), Casual Riders use them for leisure and recreation (long trips on weekends). This discovery led to three strategic recommendations aimed at the marketing team, focusing on optimizing conversion at leisure hotspots and communicating the benefits of daily use.
+
+## 1. Introduction and Business Task
+
+This project is a practical case study for the fictional bike-share company Cyclistic, with the goal of **developing a new marketing strategy to convert casual riders into annual members**.
+
+The Marketing Director, Lily Moreno, identified that the future success of the company depends on maximizing the number of annual subscriptions, as **annual members are significantly more profitable** than casual riders.
+
+---
+
+## 2. Key Business Questions
+
+To guide the strategy, the analysis focused on answering the following questions:
+
+1. **How do annual members and casual riders use Cyclistic bikes differently?** *(Focus of this analysis)*
+2. Why would casual riders buy annual Cyclistic memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+---
+
+## 3. Data Preparation
+
+The analysis used historical bike trip data from Cyclistic, made available under license by Motivate International Inc. The data used is from **January to October 2025** (the most current) and represents trips within the Chicago bike-share system.
+
+### Data Sources and Structure
+
+* **Source:** Monthly trip data from Divvy Tripdata (available at [https://divvy-tripdata.s3.amazonaws.com/index.html](https://divvy-tripdata.s3.amazonaws.com/index.html)).
+* **Column Structure:** Each CSV file contains the following 13 fields:
+    * `ride_id` (Unique trip identifier)
+    * `rideable_type` (Bike type, e.g., classic, electric)
+    * `started_at` (Date and time of trip start)
+    * `ended_at` (Date and time of trip end)
+    * `start_station_name` (Name of start station)
+    * `start_station_id` (ID of start station)
+    * `end_station_name` (Name of end station)
+    * `end_station_id` (ID of end station)
+    * `start_lat`, `start_lng` (Start Latitude and Longitude)
+    * `end_lat`, `end_lng` (End Latitude and Longitude)
+    * `member_casual` (Customer type: "member" or "casual")
+* **Credibility (ROCCC Criteria):** The data is considered **Reliable** and **Comprehensive** (faithfully tracking trips). It is **Original** (directly from the source), **Current** (2025), and **Extensive** (covering almost a year).
+* **Privacy Considerations:** The use of Personally Identifiable Information (PII) is strictly prohibited, limiting the analysis to usage patterns (like the columns above) and not personal demographics.
+
+### Deliverable
+
+The result of this phase is the file **`cyclistic_viagens_unificadas_bruto.csv`**.
+
+([01_cyclistic_preprocessing.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/01_cyclistic_preprocessing.ipynb))
+
+---
+
+## 4. Data Cleaning and Analytical Data Creation
+
+This phase aimed to transform the raw dataset (12 months of unified data) into a clean, consistent, and enriched set with crucial metrics, preparing it for analysis.
+
+### Tools and Methodology
+
+| Main Task | Chosen Tool | Rationale |
+| :--- | :--- | :--- |
+| **Cleaning and Transformation** | **Python (Pandas)** | Chosen as the industry standard for DataFrame manipulation. Pandas offers efficiency (especially with the `.dt` and `groupby` syntax) for handling large amounts of data. |
+| **Environment** | **Google Colab** | Used to ensure reproducibility, cloud access to Google Drive data, and processing scalability. |
+
+### Data Integrity and Cleaning Measures (Data Cleaning)
+
+Data integrity was ensured by rigorously applying the following business rules in the `02_data_cleaning_and_feature_engineering.ipynb` notebook:
+
+* **Handling Nulls:** All rows missing critical geographic information (`start_station_name`, `end_station_name`, `start_lat`, `end_lat`) were **removed** using the `df.dropna()` method. This measure, while discarding approximately 2 million records, was crucial to ensure that station analysis and hotspot mapping were done only with complete and valid data.
+* **Duplicate Removal:** It was verified and ensured that the `ride_id` field (Trip ID) was **unique**, removing any duplicate rows to avoid bias in counts and averages.
+* **Time Anomaly Filtering:** Trips that represented logging errors or were not representative of normal service use were removed:
+    * Trips with a **duration of less than 1 minute** (short-time anomalies).
+    * Trips with a **duration exceeding 24 hours** (indicators of theft or severe system failure).
+* **Categorical Verification:** It was ensured that the `member_casual` column contained **only** the valid values (`'member'` and `'casual'`).
+
+### Feature Engineering
+
+To answer the business question, new analytical fields were created from the date and time fields:
+
+| Created Column | Calculation | Relevance to Analysis |
+| :--- | :--- | :--- |
+| **`ride_length(min)`** | `(ended_at - started_at)` / 60 | **Key Metric** to calculate the average trip duration and differentiate casual use (longer trips) from member use (shorter commute trips). |
+| **`ride_length(hours)`** | `(ended_at - started_at)` / 3600 | **Key Metric** Control and Filtering: Used to apply time limit business rules (e.g., removing trips > 24 hours) legibly. |
+| **`day_of_week`** | Extracted from `started_at` | Essential for grouping and comparing usage frequency on **weekdays (0-4)** vs. **weekends (5-6)**. |
+| **`month`** | Extracted from `started_at` | Used to identify **seasonal** usage patterns (e.g., casuals dominate in summer). |
+
+### Deliverable
+
+The result of this phase is the file **`cyclistic_dados_limpos_analise.csv`**.
+
+([02_data_cleaning_and_feature_engineering.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/02_data_cleaning_and_feature_engineering.ipynb))
+
+---
+
+## 5. Data Analysis
+
+This section consolidates the findings from the statistical analysis (performed in Python) and the communication of these findings through an interactive dashboard (Power BI), answering the central business question.
+
+The analysis was conducted in the notebook **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))** to aggregate the clean dataset and generate the crucial comparison metrics:
+
+| Aggregation Performed | Key Columns | Analytical Objective |
+| :--- | :--- | :--- |
+| **Average Trip Length Total and by Member** | `ride_length(min)`, `member_casual` | Measure the difference in **duration** and confirm that casual customers use the service for significantly longer periods. |
+| **Trip Count by Member and Day of Week** | `day_of_week`, `member_casual` | Identify **frequency peaks** in the weekly cycle. Members: weekdays. Casuals: weekends. |
+| **Average Trip Length by Member and Day of Week** | `ride_length(min)`, `day_of_week` | Reinforce the duration pattern by day: Casuals ride longer, especially on weekends. |
+| **Top 10 Stations (Casual vs. Member)** | `start_station_name`, `member_casual` | Identify the **Hotspots** for each group. Members: Commuter/office centers. Casuals:
+
+### Findings and Answer to the Business Question
+
+The comparative analysis between the two customer bases (`member` and `casual`) revealed fundamentally different usage patterns that can be exploited by marketing:
+
+#### Answer to the Business Question:
+
+**Yes, annual members and casual riders use Cyclistic bikes in distinct ways.**
+
+The main conclusion is that **Members seek transportation (commuting)**, and **Casuals seek leisure and recreation**.
+
+| Metric | Member Customers (Annual) | Casual Customers | Conclusion |
+| :--- | :--- | :--- | :--- |
+| **Average Trip Duration** | Short and Consistent (Functional use) | Long and Variable (Recreational use) | Marketing for casuals should focus on converting **long, sporadic use** into **daily use**. |
+| **Usage Peak** | **Weekdays** (Monday to Friday) | **Weekends** (Saturday and Sunday) | Members use the bike for **commuting** (work/home). Casuals use it for **leisure**. |
+| **Starting Location (Top 10)** | Stations near **dense commercial and residential areas**. | Stations near **parks, lakes, and tourist attractions**. | Casual hotspots are the ideal locations for **in-person marketing** of the annual membership. |
+
+### Communication (Deliverable)
+
+The analysis findings were communicated to the Director and the Marketing Team through an **Interactive Dashboard** in Power BI...
+
+**Dashboard Overview (Usage Analysis)**
+![Dashboard Cyclistic - Usage Analysis Overview](images/dashboard_cyclistic.png)
+**Dashboard Overview (Usage Analysis)**
+![Dashboard Cyclistic - Usage Analysis Overview](images/dashboard_cyclistic_2.png)
+
+
+...
+➡️ **[Access Statistical Analysis Notebook (Python)]**
+**([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))**
+
+##  Key Recommendations
+
+Based on the **duration**, **frequency**, and **location** patterns of Casual Riders, the recommendations are:
+
+---
+
+### Recommendation 1: Location and Time-Targeted Marketing Campaign 
+
+* **The Insight:** Casual Riders have usage peaks on **Weekends** and concentrate at leisure/tourism stations (parks, lakes, waterfronts).
+* **The Action:** Implement **Proximity Marketing (Geofencing)** and **Email Marketing** campaigns triggered after a long casual trip (above the member average, e.g., 35 minutes), especially on Sundays. The message should focus on the **cost-benefit advantage** of an annual subscription for weekday use.
+* **Success Metric:** **15% increase** in conversions from Casuals who started trips at tourist stations on weekends.
+
+---
+
+### Recommendation 2: Value Offers for Daily Commuting ️
+
+* **The Insight:** The main barrier for Casuals is seeing the bike only as recreational. Members use the service consistently for commuting on weekdays.
+* **The Action:** Create a **discounted 30-day subscription trial** or a **Loyalty Program** focused on weekday trips. Communication should emphasize **time and money savings** on the home-to-work commute compared to public transport or cars.
+* **Success Metric:** Increase in the **average weekly frequency** of Casuals who become members.
+
+---
+
+### Recommendation 3: Improving the Experience at Frequent Casual Use Points 
+
+* **The Insight:** The **Top 10 Casual Stations** are ideal locations for conversion, as they demonstrate high demand and strong recreational engagement.
+* **The Action:** Implement **"Conversion Stations"** on weekends at the busiest hotspots. This includes having staff presence (brand ambassadors) to offer **exclusive promotions** for annual subscriptions (e.g., immediate 30-day free trial) and ensure **optimal bike supply** during peak leisure hours.
+* **Success Metric:** Increase in the **on-site conversion rate** to 5% of Casuals who complete long trips at high-volume stations.
