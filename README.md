@@ -120,11 +120,14 @@ A principal conclusão é que **Membros buscam transporte (deslocamento)**, e **
 
 ### Comunicação (Entregável)
 
-As descobertas da análise foram comunicadas à Diretoria e à Equipe de Marketing por meio de um **Dashboard Interativo** no Power BI. Este formato garante clareza, acessibilidade e permite que o público explore os dados e as diferenças de uso de forma intuitiva.
+As descobertas da análise foram comunicadas à Diretoria e à Equipe de Marketing por meio de um **Dashboard Interativo** no Power BI...
+
+**Visão Geral do Dashboard (Análise de Uso)**
+![Dashboard Cyclistic - Visão Geral da Análise de Uso](images/dashboard_cyclistic.png)
+**Visão Geral do Dashboard (Análise de Uso)**
+![Dashboard Cyclistic - Visão Geral da Análise de Uso](images/dashboard_cyclistic_2.png)
 
 
-➡️ **[Link para o Dashboard Power BI (Visualizações de Suporte)]**
-(Insira o Link de Compartilhamento do seu Dashboard no Power BI Service aqui)
-
+...
 ➡️ **[Acessar o Notebook de Análise Estatística (Python)]**
 **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))**
