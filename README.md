@@ -48,7 +48,7 @@ A análise utilizou dados históricos de viagens de bicicleta da Cyclistic, disp
     * `start_lat`, `start_lng` (Latitude e Longitude de início)
     * `end_lat`, `end_lng` (Latitude e Longitude de fim)
     * `member_casual` (Tipo de cliente: "member" ou "casual")
-* **Credibilidade (Critério ROCCC):** Os dados são considerados **Confidáveis** e **Completos** (rastreando fielmente as viagens). São **Originais** (diretamente da fonte), **Atuais** (2025) e **Abrangentes** (cobrem quase um ano).
+* **Credibilidade (Critério ROCCC):** Os dados são considerados **Confiáveis** e **Completos** (rastreando fielmente as viagens). São **Originais** (diretamente da fonte), **Atuais** (2025) e **Abrangentes** (cobrem quase um ano).
 * **Considerações de Privacidade:** O uso de informações de identificação pessoal (PII) é estritamente proibido, limitando a análise a padrões de uso (como as colunas acima) e não a dados demográficos pessoais.
 
 ### Entregável
@@ -104,7 +104,7 @@ O resultado desta fase é o arquivo **`cyclistic_dados_limpos_analise.csv`**.
 
 Esta seção consolida as descobertas da análise estatística (realizada em Python) e a comunicação dessas descobertas através de um dashboard interativo (Power BI), respondendo à pergunta central do negócio.
 
-A análise foi conduzida no notebook **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))** para agregar o conjunto de dados limpo e gerar as métricas de comparação cruciais:
+A análise foi conduzida no notebook **(03_analysis_and_visualization.ipynb)** para agregar o conjunto de dados limpo e gerar as métricas de comparação cruciais:
 
 | Agregação Realizada | Colunas Chave | Objetivo Analítico |
 | :--- | :--- | :--- |
@@ -276,7 +276,7 @@ The result of this phase is the file **`cyclistic_dados_limpos_analise.csv`**.
 
 This section consolidates the findings from the statistical analysis (performed in Python) and the communication of these findings through an interactive dashboard (Power BI), answering the central business question.
 
-The analysis was conducted in the notebook **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))** to aggregate the clean dataset and generate the crucial comparison metrics:
+The analysis was conducted in the notebook **(03_analysis_and_visualization.ipynb)** to aggregate the clean dataset and generate the crucial comparison metrics:
 
 | Aggregation Performed | Key Columns | Analytical Objective |
 | :--- | :--- | :--- |
