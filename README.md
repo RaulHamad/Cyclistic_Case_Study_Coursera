@@ -88,3 +88,43 @@ O resultado desta fase é o arquivo **`cyclistic_dados_limpos_analise.csv`**.
 ([02_data_cleaning_and_feature_engineering.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/02_data_cleaning_and_feature_engineering.ipynb))
 
 ---
+
+## 5. Analisar dados
+
+Esta seção consolida as descobertas da análise estatística (realizada em Python) e a comunicação dessas descobertas através de um dashboard interativo (Power BI), respondendo à pergunta central do negócio.
+
+A análise foi conduzida no notebook **([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))** para agregar o conjunto de dados limpo e gerar as métricas de comparação cruciais:
+
+| Agregação Realizada | Colunas Chave | Objetivo Analítico |
+| :--- | :--- | :--- |
+| **Média de Viagens Total e por Membro** | `ride_length(min)`, `member_casual` | Medir a diferença de **duração** e confirmar que clientes casuais usam por períodos significativamente mais longos. |
+| **Contagem de Viagens por Membro e Dia da Semana** | `day_of_week`, `member_casual` | Identificar os **picos de frequência** no ciclo semanal. Membros: dias úteis. Casuais: fins de semana. |
+| **Média de Viagens por Membro e Dia da Semana** | `ride_length(min)`, `day_of_week` | Reforçar o padrão de duração por dia: Casuais pedalam por mais tempo, especialmente nos finais de semana. |
+| **Top 10 Estações (Casual vs. Membro)** | `start_station_name`, `member_casual` | Identificar os **Hotspots** para cada grupo. Membros: Centros de transporte/escritórios. Casuais: Pontos turísticos. |
+
+### Descobertas e Resposta à Pergunta de Negócio
+
+A análise comparativa entre as duas bases de clientes (`member` e `casual`) revelou padrões de uso fundamentalmente diferentes, que podem ser explorados pelo marketing:
+
+#### 🎯 Resposta à Pergunta de Negócio:
+
+**Sim, membros anuais e ciclistas casuais usam as bicicletas Cyclistic de maneiras distintas.**
+
+A principal conclusão é que **Membros buscam transporte (deslocamento)**, e **Casuais buscam lazer e recreação**.
+
+| Métrica | Clientes Membros (Anuais) | Clientes Casuais | Conclusão |
+| :--- | :--- | :--- | :--- |
+| **Duração Média da Viagem** | Curta e Consistente (Uso funcional) | Longa e Variável (Uso recreativo) | O foco do marketing para casuais deve ser converter o **uso longo e esporádico** em **uso diário**. |
+| **Pico de Uso** | **Dias Úteis** (Segunda a Sexta) | **Finais de Semana** (Sábado e Domingo) | Membros usam a bicicleta para o **deslocamento** (trabalho/casa). Casuais usam nos dias de **lazer**. |
+| **Local de Partida (Top 10)** | Estações próximas a **áreas comerciais e residenciais densas**. | Estações próximas a **parques, lagos e pontos turísticos**. | Os *hotspots* casuais são os locais ideais para o **marketing presencial** da associação anual. |
+
+### Comunicação (Entregável)
+
+As descobertas da análise foram comunicadas à Diretoria e à Equipe de Marketing por meio de um **Dashboard Interativo** no Power BI. Este formato garante clareza, acessibilidade e permite que o público explore os dados e as diferenças de uso de forma intuitiva.
+
+
+➡️ **[Link para o Dashboard Power BI (Visualizações de Suporte)]**
+(Insira o Link de Compartilhamento do seu Dashboard no Power BI Service aqui)
+
+➡️ **[Acessar o Notebook de Análise Estatística (Python)]**
+**([03_analysis_and_visualization.ipynb](https://github.com/RaulHamad/Cyclistic_Case_Study_Coursera/blob/main/03_analysis_and_visualization.ipynb))**
